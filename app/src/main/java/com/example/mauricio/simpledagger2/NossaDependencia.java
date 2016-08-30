@@ -6,8 +6,14 @@ package com.example.mauricio.simpledagger2;
 
 public class NossaDependencia {
 
+    public String nossaDependencia = "Nossa dependencia";
+
     public String retornaNossaDependencia(){
-        return "Nossa dependencia";
+        return nossaDependencia;
+    }
+
+    public void setNossaDependencia(String value){
+        this.nossaDependencia = value;
     }
 
 }

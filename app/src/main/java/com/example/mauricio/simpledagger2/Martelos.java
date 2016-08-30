@@ -1,6 +1,8 @@
 package com.example.mauricio.simpledagger2;
 
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -22,16 +24,14 @@ public class Martelos {
         return new MarteloGrande();
     }
 
-    @Provides MainHandlers provideMainHandlers(){
-        return new MainHandlers(providesMarteloMedio());
-    }
-
-    @Provides Echo provideEcho(){
-        return new Echo();
-    }
-
     @Provides NossaDependencia providesNossaDependencia(){
         return new NossaDependencia();
     }
+
+    @Provides Presenter providesPresenter(){
+        return new Presenter();
+    }
+
+
 
 }

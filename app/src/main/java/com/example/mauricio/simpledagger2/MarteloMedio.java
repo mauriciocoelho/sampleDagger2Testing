@@ -20,4 +20,9 @@ public class MarteloMedio {
         return  nossaDependencia.retornaNossaDependencia();
     }
 
+    public void setDependencia(String value){
+        nossaDependencia.setNossaDependencia(value);
+    }
+
+
 }

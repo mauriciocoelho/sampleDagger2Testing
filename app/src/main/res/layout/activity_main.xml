@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 <data>
     <variable
-        name="echo"
-        type="com.example.mauricio.simpledagger2.Echo">
+        name="mainViewModel"
+        type="com.example.mauricio.simpledagger2.MainViewModel">
     </variable>
     <variable
-        name="handlers"
-        type="com.example.mauricio.simpledagger2.MainHandlers">
+        name="presenter"
+        type="com.example.mauricio.simpledagger2.Presenter">
     </variable>
 </data>
 
@@ -18,14 +18,20 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@{echo.text}"/>
+        android:text="@={mainViewModel.text}"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@={mainViewModel.text}"
+        />
 
     <Button
         android:text="Test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button"
-        android:onClick="@{handlers.onClickTest}"/>
+        android:onClick="@{() -> presenter.onClickTest(mainViewModel)}"/>
 
 
 </LinearLayout>

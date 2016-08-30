@@ -1,7 +1,5 @@
 package com.example.mauricio.simpledagger2;
 
-import android.app.*;
-import android.app.Application;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.databinding.DataBindingUtil;
@@ -15,9 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     MarteloMedio marteloMedio;
     @Inject
-    MainHandlers mainHandlers;
-    @Inject
-    Echo echo;
+    Presenter presenter;
 
     ActivityMainBinding mBinding;
 
@@ -27,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         MyApplication.getCaixaDeFerramentas().inject(this);
 
-        echo.text = marteloMedio.getDepencencia();
+        MainViewModel mainViewModel = new MainViewModel();
 
-        mBinding.setEcho(echo);
-        mBinding.setHandlers(mainHandlers);
+        mBinding.setMainViewModel(mainViewModel);
+        mBinding.setPresenter(presenter);
+
 
     }
 
