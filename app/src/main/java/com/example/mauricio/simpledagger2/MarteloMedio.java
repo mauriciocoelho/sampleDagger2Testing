@@ -6,7 +6,7 @@ package com.example.mauricio.simpledagger2;
 
 public class MarteloMedio {
 
-    NossaDependencia nossaDependencia;
+    private NossaDependencia nossaDependencia;
 
     public MarteloMedio(NossaDependencia nossaDependencia) {
         this.nossaDependencia = nossaDependencia;

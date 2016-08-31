@@ -6,7 +6,7 @@ package com.example.mauricio.simpledagger2;
 
 public class NossaDependencia {
 
-    public String nossaDependencia = "Nossa dependencia";
+    private String nossaDependencia = "Nossa dependencia";
 
     public String retornaNossaDependencia(){
         return nossaDependencia;
