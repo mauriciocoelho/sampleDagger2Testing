@@ -35,5 +35,15 @@ public class MarteloMedioTest {
         assertEquals("dependencia", result);
     }
 
+    @Test
+    public void deveRetornarDependenciaDiferente() throws Exception {
+        String expected = "dependenciadiferente";
+
+        when(mockNossaDependencia.retornaNossaDependencia()).thenReturn(expected);
+        String result =  marteloMedio.getDepencencia();
+
+        assertNotEquals("dependencia", result);
+    }
+
 
 }
