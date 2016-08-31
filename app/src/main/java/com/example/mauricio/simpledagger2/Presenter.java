@@ -10,8 +10,9 @@ import android.view.View;
 public class Presenter {
 
     public void onClickTest(MainViewModel viewModel){
-        Log.i("teste", viewModel.text.get());
-
+        if (viewModel.text.get() != null && !viewModel.text.get().isEmpty()){
+            Log.i("teste", viewModel.text.get());
+        }
     }
 
 }

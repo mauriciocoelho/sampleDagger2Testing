@@ -11,4 +11,6 @@ public interface NossaCaixaDeFerramentas {
 
     void inject(MainActivity mainActivity);
 
+    void inject(MainService mainService);
+
 }
