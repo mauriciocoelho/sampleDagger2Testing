@@ -37,7 +37,7 @@ public class MainService extends IntentService {
 
     public void afficher()
     {
-        Log.i("teste", marteloMedio.getDepencencia());
+        Log.i("teste", marteloMedio.getData());
         handler.postDelayed(runnable, 1000);
     }
 

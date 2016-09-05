@@ -20,7 +20,7 @@ public class Presenter {
     public void onClickTest(MainViewModel viewModel){
         if (viewModel.text.get() != null && !viewModel.text.get().isEmpty()){
             Log.i("teste", viewModel.text.get());
-            marteloMedio.setDependencia(viewModel.text.get());
+            marteloMedio.setData(viewModel.text.get());
         }
     }
 

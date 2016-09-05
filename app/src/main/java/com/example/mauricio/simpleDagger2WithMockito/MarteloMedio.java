@@ -17,11 +17,11 @@ public class MarteloMedio {
         return "Martelo Medio";
     }
 
-    public String getDepencencia(){
+    public String getData(){
         return  repository.getData(KEY_TESTE);
     }
 
-    public void setDependencia(String value){
+    public void setData(String value){
         repository.setData(KEY_TESTE,value);
     }
 

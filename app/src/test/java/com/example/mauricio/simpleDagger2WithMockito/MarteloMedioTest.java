@@ -28,8 +28,8 @@ public class MarteloMedioTest {
     public void deveRetornarDependencia() throws Exception {
         String expected = "dependencia";
 
-        when(mockRepository.getData("key")).thenReturn(expected);
-        String result =  marteloMedio.getDepencencia();
+        when(mockRepository.getData("TESTE")).thenReturn(expected);
+        String result =  marteloMedio.getData();
 
         assertEquals("dependencia", result);
     }
@@ -38,8 +38,8 @@ public class MarteloMedioTest {
     public void deveRetornarDependenciaDiferente() throws Exception {
         String expected = "dependenciadiferente";
 
-        when(mockRepository.getData("key")).thenReturn(expected);
-        String result =  marteloMedio.getDepencencia();
+        when(mockRepository.getData("TESTE")).thenReturn(expected);
+        String result =  marteloMedio.getData();
 
         assertNotEquals("dependencia", result);
     }
