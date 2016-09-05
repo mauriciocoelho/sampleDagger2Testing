@@ -1,7 +1,8 @@
-package com.example.mauricio.simpledagger2;
+package com.example.mauricio.simpleDagger2WithMockito;
 
 import android.util.Log;
-import android.view.View;
+
+import javax.inject.Inject;
 
 /**
  * Created by mauricio on 8/30/16.
@@ -9,9 +10,17 @@ import android.view.View;
 
 public class Presenter {
 
+    MarteloMedio marteloMedio;
+
+    @Inject
+    public Presenter(MarteloMedio marteloMedio) {
+        this.marteloMedio = marteloMedio;
+    }
+
     public void onClickTest(MainViewModel viewModel){
         if (viewModel.text.get() != null && !viewModel.text.get().isEmpty()){
             Log.i("teste", viewModel.text.get());
+            marteloMedio.setDependencia(viewModel.text.get());
         }
     }
 

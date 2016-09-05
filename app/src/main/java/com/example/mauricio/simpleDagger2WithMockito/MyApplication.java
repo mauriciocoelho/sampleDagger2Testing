@@ -1,7 +1,8 @@
-package com.example.mauricio.simpledagger2;
+package com.example.mauricio.simpleDagger2WithMockito;
 
 import android.content.Intent;
-import android.util.Log;
+
+import io.paperdb.Paper;
 
 /**
  * Created by mauricio on 8/30/16.
@@ -18,6 +19,8 @@ public class MyApplication extends android.app.Application {
         caixaDeFerramentas = DaggerNossaCaixaDeFerramentas.builder()
                 .martelos(new Martelos())
                 .build();
+
+        Paper.init(this);
 
         startSevices();
     }

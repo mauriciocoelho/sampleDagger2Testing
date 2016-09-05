@@ -1,10 +1,10 @@
-package com.example.mauricio.simpledagger2;
+package com.example.mauricio.simpleDagger2WithMockito;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.databinding.DataBindingUtil;
 
-import com.example.mauricio.simpledagger2.databinding.ActivityMainBinding;
+import com.example.mauricio.simpleDagger2WithMockito.databinding.ActivityMainBinding;
 
 import javax.inject.Inject;
 

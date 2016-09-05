@@ -1,4 +1,4 @@
-package com.example.mauricio.simpledagger2;
+package com.example.mauricio.simpleDagger2WithMockito;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

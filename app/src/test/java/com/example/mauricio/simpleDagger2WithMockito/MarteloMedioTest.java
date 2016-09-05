@@ -1,4 +1,4 @@
-package com.example.mauricio.simpledagger2;
+package com.example.mauricio.simpleDagger2WithMockito;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -6,7 +6,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import static org.mockito.Mockito.*;
 
-import org.mockito.internal.matchers.Equals;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.junit.Assert.*;
@@ -17,19 +16,19 @@ public class MarteloMedioTest {
     private MarteloMedio marteloMedio;
 
     @Mock
-    private NossaDependencia mockNossaDependencia;
+    private Repository mockRepository;
 
 
     @Before
     public void setup(){
-        marteloMedio = new MarteloMedio(mockNossaDependencia);
+        marteloMedio = new MarteloMedio(mockRepository);
     }
 
     @Test
     public void deveRetornarDependencia() throws Exception {
         String expected = "dependencia";
 
-        when(mockNossaDependencia.retornaNossaDependencia()).thenReturn(expected);
+        when(mockRepository.getData("key")).thenReturn(expected);
         String result =  marteloMedio.getDepencencia();
 
         assertEquals("dependencia", result);
@@ -39,7 +38,7 @@ public class MarteloMedioTest {
     public void deveRetornarDependenciaDiferente() throws Exception {
         String expected = "dependenciadiferente";
 
-        when(mockNossaDependencia.retornaNossaDependencia()).thenReturn(expected);
+        when(mockRepository.getData("key")).thenReturn(expected);
         String result =  marteloMedio.getDepencencia();
 
         assertNotEquals("dependencia", result);

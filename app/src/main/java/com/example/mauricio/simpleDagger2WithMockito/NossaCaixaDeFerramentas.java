@@ -1,4 +1,4 @@
-package com.example.mauricio.simpledagger2;
+package com.example.mauricio.simpleDagger2WithMockito;
 
 import dagger.Component;
 
